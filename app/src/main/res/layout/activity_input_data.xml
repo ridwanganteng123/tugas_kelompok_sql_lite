@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".input_data">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="1"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Nomor"
+                android:fontFamily="monospace" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_create_black_24dp" />
+
+            <TextView
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Nama" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_group_black_24dp" />
+
+            <TextView
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Tanggal lahir" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:hint="1990-01-01" />
+
+            <TextView
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Jenis Kelamin" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:hint="L atau P" />
+
+            <TextView
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Alamat" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_place_black_24dp" />
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="30dp">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_save_black_24dp" />
+
+            <Button
+                android:textSize="25dp"
+                android:textColor="@color/textRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="SIMPAN"
+                android:background="?android:attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
