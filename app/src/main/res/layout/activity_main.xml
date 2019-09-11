@@ -15,4 +15,9 @@
         android:src="@drawable/student1"
         android:layout_marginTop="150dp"
         />
+    <ProgressBar
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
