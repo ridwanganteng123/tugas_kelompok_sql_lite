@@ -23,15 +23,11 @@
             android:orientation="horizontal"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:padding="10dp">
-
+            android:padding="20dp">
             <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_add_circle_outline_black_24dp" />
-
-
-
             <Button
                 android:textSize="15dp"
                 android:textColor="@color/textRed"
@@ -40,7 +36,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:text="Input Data"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:background="?android:attr/selectableItemBackground"
+                />
 
 
         </LinearLayout>
