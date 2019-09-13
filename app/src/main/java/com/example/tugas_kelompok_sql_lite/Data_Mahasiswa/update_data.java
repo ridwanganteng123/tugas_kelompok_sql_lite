@@ -1,8 +1,10 @@
-package com.example.tugas_kelompok_sql_lite;
+package com.example.tugas_kelompok_sql_lite.Data_Mahasiswa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.tugas_kelompok_sql_lite.R;
 
 public class update_data extends AppCompatActivity {
 

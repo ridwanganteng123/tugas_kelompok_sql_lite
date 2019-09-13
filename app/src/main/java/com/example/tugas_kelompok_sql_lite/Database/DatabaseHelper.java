@@ -1,13 +1,10 @@
-package com.example.tugas_kelompok_sql_lite;
+package com.example.tugas_kelompok_sql_lite.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,27 +25,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String createUserTable = "Create Table " + TABLE_NAME + " ( " + KEY_NUMBER + " INTEGER PRIMARY KEY , " + KEY_NAME + " TEXT , " + KEY_DATE + " TEXT , " + KEY_GENDER + " TEXT , " + KEY_LOCATION + " TEXT )";
+        String createUserTable = "Create Table " + TABLE_NAME + " ( " + KEY_NUMBER + " TEXT PRIMARY KEY , " + KEY_NAME + " TEXT , " + KEY_DATE + " TEXT , " + KEY_GENDER + " TEXT , " + KEY_LOCATION + " TEXT )";
         sqLiteDatabase.execSQL(createUserTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        String sql = ("drop table if exists" + TABLE_NAME);
+        String sql = ("drop table if exists " + TABLE_NAME);
         sqLiteDatabase.execSQL(sql);
         onCreate(sqLiteDatabase);
-    }
-
-    public void insert(Mahasiswa mahasiswa) {
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(KEY_NUMBER,mahasiswa.getNumber());
-        values.put(KEY_NAME, mahasiswa.getName());
-        values.put(KEY_DATE, mahasiswa.getDate());
-        values.put(KEY_GENDER, mahasiswa.getGender());
-        values.put(KEY_LOCATION, mahasiswa.getLocation());
-
-        sqLiteDatabase.insert(TABLE_NAME, null, values);
     }
 
     public List<Mahasiswa> selectUserData() {
@@ -60,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = sqLiteDatabase.query(TABLE_NAME, columns, null, null, null, null, null);
 
         while (cursor.moveToNext()) {
-            int number = cursor.getInt(0);
+            String number = cursor.getString(0);
             String name = cursor.getString(1);
             String date = cursor.getString(2);
             String gender = cursor.getString(3);
@@ -76,6 +61,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mahasiswaList.add(mahasiswa);
         }
         return mahasiswaList;
+    }
+    public void insert(Mahasiswa mahasiswa) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_NUMBER,mahasiswa.getNumber());
+        values.put(KEY_NAME, mahasiswa.getName());
+        values.put(KEY_DATE, mahasiswa.getDate());
+        values.put(KEY_GENDER, mahasiswa.getGender());
+        values.put(KEY_LOCATION, mahasiswa.getLocation());
+
+        sqLiteDatabase.insert(TABLE_NAME, null, values);
     }
 
     public void delete(Integer number) {

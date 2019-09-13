@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.tugas_kelompok_sql_lite.Data_Mahasiswa.Detail_data;
+import com.example.tugas_kelompok_sql_lite.Data_Mahasiswa.input_data;
+import com.example.tugas_kelompok_sql_lite.Data_Mahasiswa.list_data_mahasiswa;
+
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 
     Button btn_lihatdata;
