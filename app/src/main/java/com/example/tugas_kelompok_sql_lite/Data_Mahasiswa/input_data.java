@@ -19,7 +19,7 @@ public class input_data extends AppCompatActivity {
     Button btnInput;
     Context context;
     String aksi = "Simpan";
-
+    //di comment biar bisa kekomit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

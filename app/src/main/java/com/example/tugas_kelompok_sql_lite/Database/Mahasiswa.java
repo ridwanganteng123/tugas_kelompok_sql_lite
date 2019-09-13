@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Mahasiswa implements Parcelable {
     String  number;
     String name,date,gender,location;
-
+    //di comment biar bisa kekomit
     public Mahasiswa() {
 
     }

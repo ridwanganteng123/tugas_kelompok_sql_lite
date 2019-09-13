@@ -80,6 +80,7 @@ public class list_data_mahasiswa extends AppCompatActivity implements Recyclervi
                         context.startActivity(updateData);
                     }
                 });//Masukin delete data dibawah sini wan  nanti si ";' nya hapus aja
+        //di comment biar bisa kekomit
         AlertDialog dialog = builder.create();
         dialog.show();
     }

@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
-
+    //di comment biar bisa kekomit
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String createUserTable = "Create Table " + TABLE_NAME + " ( " + KEY_NUMBER + " TEXT PRIMARY KEY , " + KEY_NAME + " TEXT , " + KEY_DATE + " TEXT , " + KEY_GENDER + " TEXT , " + KEY_LOCATION + " TEXT )";

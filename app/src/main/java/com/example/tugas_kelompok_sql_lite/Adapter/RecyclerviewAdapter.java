@@ -18,7 +18,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     List<Mahasiswa> listMahasiswa;
     Context context;
     UserActionListener listener;
-
+    //di comment biar bisa kekomit
     public interface UserActionListener {
         void onUserAction(Mahasiswa mahasiswa);
     }

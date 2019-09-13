@@ -11,7 +11,7 @@ import com.example.tugas_kelompok_sql_lite.R;
 public class Detail_data extends AppCompatActivity {
     EditText edtNumber,edtName,edtDate,edtGender, edtLocation;
 
-
+    //di comment biar bisa kekomit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
